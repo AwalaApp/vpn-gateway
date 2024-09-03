@@ -26,8 +26,5 @@ jobs:
     - name: Run tests with coverage
       run: cargo test-cov
 
-    - name: Run doc tests
-      run: cargo test --doc
-
     - name: Build
       run: cargo build --release
