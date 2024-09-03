@@ -15,7 +15,7 @@ jobs:
       uses: actions-rust-lang/setup-rust-toolchain@v1
 
     - name: Install cargo-run-bin
-      run: cargo install cargo-run-bin
+      run: cargo install cargo-run-bin --version 1.7.3
 
     - name: Check formatting
       run: cargo fmt --all -- --check
