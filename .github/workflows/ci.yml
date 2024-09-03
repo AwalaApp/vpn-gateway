@@ -13,8 +13,6 @@ jobs:
 
     - name: Install Rust toolchain
       uses: actions-rust-lang/setup-rust-toolchain@v1
-      with:
-        components: rustfmt, clippy
 
     - name: Check formatting
       run: cargo fmt --all -- --check
@@ -22,8 +20,11 @@ jobs:
     - name: Clippy
       run: cargo clippy --frozen
 
-    - name: Run tests
-      run: cargo test
+    - name: Run tests with coverage
+      run: cargo test-cov
+
+    - name: Run doc tests
+      run: cargo test --doc
 
     - name: Build
       run: cargo build --release

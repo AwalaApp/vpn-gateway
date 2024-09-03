@@ -1,0 +1,6 @@
+[alias]
+binstall = ["bin", "cargo-binstall"]
+llvm-cov = ["bin", "cargo-llvm-cov"]
+nextest = ["bin", "cargo-nextest"]
+test-cov = ["bin", "cargo-llvm-cov", "nextest", "--fail-uncovered-lines", "0",
+            "--fail-uncovered-regions", "0"]

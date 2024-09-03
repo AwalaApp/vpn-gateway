@@ -4,3 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+
+[package.metadata.bin]
+cargo-binstall = { version = "1.10.3" }
+cargo-nextest = { version = "0.9.77" }
+cargo-llvm-cov = { version = "0.6.11" }
